@@ -29,3 +29,12 @@ To Predict values of Y(t) (which is the first data-point in a day), we use all t
 
 # Evaluation: 
 We have divided the data into  2 parts namely training and test data set. we have fed the model with the train data set that helped the model to learn something about the data. Now we have predicted the values present in the train data set. We have compared the Predicted values with the Observed values and calculated the RMSE( Root Mean Square Error). We have selected the model which has the least RMSE Value and higher Accuracy.
+
+# Files Uploaded Details:
+Final_Cleaned.csv - This file is the cleaned dataset which doesn't contain any missing values. This file has been used to work on the BestNinjaModel.R to get which model is best for getting the prediction.
+
+BestNinjaModel.R - This file contains the code which gave us the idea as to which model we should use when actually predicting the cryptocurrency data. 4 models were taken into consideration - HoltWinters, ETS, 2 different ARIMA models in which one model the p and q value contained the lag containing max autocorrelation value and another model which in which the lag after which the autocorrelation value showed "cutoff". Out of these HoltWinter and ARIMA-2 model showed least SSE values (Sum of Squared Errors).
+
+NinjaModel-Modified.R - This file contains the whole code for predicting the values of 20 cryptocurrency from 25th Jan 2018 to 23th March 2018. We are applying ARIMA-2 model which was concluded to be a good model for prediction in BestNinjaModel.R above. In this file all the cleaning part of the dataframe has been done. Click the link below to get the file on which the analysis has been done. At the end of the code we are writing the data frames into files.
+
+https://drive.google.com/open?id=11lQJtKlJXRYBAR6v2d27QqWQmLCa478X - Click this google drive link to get the file in which the modified code was run. (Please note that the file is huge)
